@@ -5,5 +5,5 @@ class RunInCmdCommand(sublime_plugin.TextCommand):
 		for region in self.view.sel():
 		    if not region.empty():   
 		        s = self.view.substr(region)
-		        subprocess.call("cmd.exe /C " + s)
+		        subprocess.call("cmd.exe /C " + s + " & pause")
 		        
